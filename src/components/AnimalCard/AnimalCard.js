@@ -1,6 +1,9 @@
 import React from 'react';
 import './AnimalCard.css'
 
-export default function AnimalCard() {
-  return <h2>Animal</h2>
+export default function AnimalCard(props) {
+  const { name } = props;
+  return(
+    <h2>{ name }</h2>
+  );
 }

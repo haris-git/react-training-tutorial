@@ -45,7 +45,10 @@ function App() {
       <div className="wrapper">
         <h1>Animals</h1>
         {data.map(animal => (
-          <AnimalCard key={animal.name}/>
+          <AnimalCard
+            key={ animal.name }
+            name={ animal.name }
+          />
         ))}
       </div>
     </>

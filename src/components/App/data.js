@@ -2,12 +2,14 @@ export default [
   {
     name: 'Lion',
     scientificName: 'Panthero leo',
+    order: 'Carnivora',
     size: 140,
     diet: ['meat'],
   },
   {
     name: 'Gorilla',
     scientificName: 'Gorilla beringei',
+    order: 'Primates',
     size: 205,
     diet: ['plants', 'insects'],
     additional: {
@@ -17,6 +19,7 @@ export default [
   {
     name: 'Zebra',
     scientificName: 'Equus quagga',
+    order: 'Perissodactyla',
     size: 322,
     diet: ['plants'],
     additional: {

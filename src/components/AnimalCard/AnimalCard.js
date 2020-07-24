@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './AnimalCard.css'
 
 export default function AnimalCard({
@@ -18,4 +19,22 @@ export default function AnimalCard({
       <button onClick={() => showAdditional(additional)}>More Info</button>
     </div>
   );
+}
+
+/**
+ * The PropType explicitly define the type of the data for a certain prop.
+ * PropType is a runtime check!!! The code will still compile if the data is not correct.
+ */
+AnimalCard.propTypes = {
+  additional: PropTypes.shape({
+    link: PropTypes.string,
+    notes: PropTypes.string
+  }),
+  diet: PropTypes.arrayOf(PropTypes.string).isRequired,
+  name: PropTypes.string.isRequired,
+  scientificName: PropTypes.string.isRequired,
+  showAdditional: PropTypes.func.isRequired,
+  size: PropTypes.number.isRequired,
+}
+
 }

@@ -13,7 +13,7 @@ export default function AnimalCard({
   ...props
 }) {
   return (
-    <Card title="Animal">
+    <Card title="Animal" details={ <em>Mammal</em> }>
       <div className="animal-wrapper">
         <h2>{name}</h2>
         <h3>{scientificName}</h3>

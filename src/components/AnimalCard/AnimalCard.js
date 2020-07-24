@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AnimalDetails from '../AnimalDetails/AnimalDetails';
+import Card from '../Card/Card';
 import './AnimalCard.css'
 
 export default function AnimalCard({
@@ -12,13 +13,15 @@ export default function AnimalCard({
   ...props
 }) {
   return (
-    <div className="animal-wrapper">
-      <h2>{name}</h2>
-      <h3>{scientificName}</h3>
-      <h4>{size}kg</h4>
-      <AnimalDetails { ...props } />
-      <button onClick={() => showAdditional(additional)}>More Info</button>
-    </div>
+    <Card title="Animal">
+      <div className="animal-wrapper">
+        <h2>{name}</h2>
+        <h3>{scientificName}</h3>
+        <h4>{size}kg</h4>
+        <AnimalDetails { ...props } />
+        <button onClick={() => showAdditional(additional)}>More Info</button>
+      </div>
+    </Card>
   );
 }
 

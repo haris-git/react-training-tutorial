@@ -60,6 +60,7 @@ function App() {
             scientificName={ animal.scientificName }
             showAdditional={ showAdditional }
             size={ animal.size }
+            order={ animal.order }
           />
         ))}
       </div>

@@ -6,6 +6,7 @@ export default function AnimalCard({
   diet,
   name,
   scientificName,
+  showAdditional,
   size
 }) {
   return (
@@ -14,6 +15,7 @@ export default function AnimalCard({
       <h3>{scientificName}</h3>
       <h4>{size}kg</h4>
       <div>{diet.join(', ')}.</div>
+      <button onClick={() => showAdditional(additional)}>More Info</button>
     </div>
   );
 }

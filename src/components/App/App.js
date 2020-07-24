@@ -21,6 +21,13 @@ const emojis = [
   }
 ];
 
+function showAdditional(additional) {
+  const alertInformation = Object.entries(additional)
+    .map(information => `${information[0]}: ${information[1]}`)
+    .join('\n');
+  alert(alertInformation)
+};
+
 function App() {
   var greeting = "greeting";
 
@@ -51,6 +58,7 @@ function App() {
             key={ animal.name }
             name={ animal.name }
             scientificName={ animal.scientificName }
+            showAdditional={ showAdditional }
             size={ animal.size }
           />
         ))}

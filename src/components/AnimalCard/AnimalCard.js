@@ -37,4 +37,11 @@ AnimalCard.propTypes = {
   size: PropTypes.number.isRequired,
 }
 
+/**
+ * They give the chance to define some default data, in case something is not required.
+ */
+AnimalCard.defaultProps = {
+  additional: {
+    notes: 'No Additional Information'
+  }
 }
